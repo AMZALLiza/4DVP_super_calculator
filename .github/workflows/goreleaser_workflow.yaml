@@ -38,4 +38,5 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/${{ 4dvp_super_calculator }}:${{ github.ref }}
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/4dvp_super_calculator:${{ github.ref_name }}
+
