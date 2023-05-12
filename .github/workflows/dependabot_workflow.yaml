@@ -1,0 +1,25 @@
+name: Dependabot
+
+on:
+  schedule:
+    - cron: '0 1 * * *' # Exécuter tous les jours à minuit
+
+jobs:
+  dependabot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup Go
+        uses: actions/setup-go@v2
+        with:
+          go-version: 1.17
+
+      - name: Dependabot
+        uses: dependabot/dependabot-action@v2
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          directory: "/" # Chemin du répertoire à surveiller (par défaut : racine)
+          package-manager: "gomod" # Gestionnaire de packages (par défaut : gomod pour Go)
+          update-schedule: "daily" # Planification des mises à jour (par défaut : daily)
