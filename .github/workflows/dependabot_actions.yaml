@@ -3,7 +3,7 @@ name: Dependabot
 #configuration du dependabot pour l'execution à 1 h chaque jour 
 on:
   schedule:
-    - cron: '0 0 * * *' 
+    - cron: '0 1 * * *' 
 
 #utilisation de la version d'ubuntu, configurer la version 2 
 jobs:
