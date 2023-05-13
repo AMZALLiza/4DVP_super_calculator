@@ -1,3 +1,4 @@
+# hadolint ignore=DL3006
 FROM golang:1.19-buster AS build
 
 WORKDIR /app
