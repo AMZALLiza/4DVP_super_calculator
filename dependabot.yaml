@@ -1,4 +1,5 @@
-# Configuration pour Go
+# Configurer l'environnement "go" en spécifiant : la version du dependabot, le répertoire, quand dependabot vérifie les maj et type de dépendance à mettre à jour.
+
 ---
 version: 2
 updates:
@@ -12,7 +13,7 @@ allow:
 
 
 
-# Configuration pour Docker
+# Configurer le docker pour le fichier dependabot-actions.
 ---
 version: 2
 updates:
