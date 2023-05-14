@@ -57,7 +57,7 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-#construire et publier l'image docker en utilisant build-push-action, il est important de saisir le nom de votre token dans le tag ( une fois le tag réussi on peut voir notre image dans le docker - tags )
+#construire et publier l'image docker en utilisant build-push-action, il est important de saisir le nom de votre token dans le tag ( une fois le tag créer on peut voir notre image dans le docker - tags )
       - name: Build and Publish Docker Image
         uses: docker/build-push-action@v4
         with:
