@@ -9,6 +9,26 @@ It supports :
 - addition
 - subtraction
 
+## Implementation of DevOps in Super Calculator
+
+To implement DevOps philosophy in this project, you need to : 
+
+- create Docker Hub account
+- create github account 
+
+To run Workflows, you need : 
+- create .github/workflows folder in your project.
+
+To create Docker images and build your project with docker you need :
+- create a repository in your Docker Hub.
+- generate an access token to authenticate you to the Docker Hub.
+- add the access token that docker generated to you in your github project ( settings - secrets and variables - actions)
+- create workflows and push it to the github repository and see the result in actions. 
+
+Github Repository : ```text
+https://github.com/AMZALLiza/4DVP_super_calculator.git ```
+
+
 ## Usage example
 
 ```text
