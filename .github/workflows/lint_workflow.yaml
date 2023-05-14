@@ -1,10 +1,12 @@
 name: Lint Workflow
 
+#configurer le workflow à chaque push/workflow_dispatch
 on:
   pull_request:
   push:
   workflow_dispatch:
 
+#créer un job avec SE ubuntu et utiliser la version 3 pour le code du GITHUB.
 jobs:
   Lint:
     runs-on: ubuntu-latest
@@ -13,16 +15,19 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
 
+#configurer une analyse static pour le code.
     - name: Static analysis with Semgrep
       uses: returntocorp/semgrep-action@v1
       with:
        config: "p/default"
 
+#analyser le Dockerfile avec hadolint 
     - name: Dockerfile Analysis with Hadolint
       uses: hadolint/hadolint-action@v3.1.0
       with:
        dockerfile: Dockerfile
 
+#utiliser super-lint lors d'un push et le token générer pour valider le code. 
     - name: Super linter on Pull Request
       if: ${{ github.event_name == 'pull_request' }}
       uses: github/super-linter/slim@v5
