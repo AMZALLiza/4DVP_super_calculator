@@ -1,6 +1,6 @@
 name: Test Workflow
 
-#déclancer le workflow à chaque push.
+#déclancer le workflow à chaque push pour les tests du projet.
 on:
   push:
 
