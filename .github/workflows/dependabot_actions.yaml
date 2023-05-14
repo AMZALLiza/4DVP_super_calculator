@@ -3,7 +3,7 @@ name: dependabot
 #configuration du dependabot pour l'execution à 1 h du matin chaque jours.
 on:
   schedule:
-    - cron: '0 1 * * *' 
+    - cron: "0 1 * * *"
 
 #création d'un job pour le dependabot et utilisation du SE ubuntu.
 jobs:

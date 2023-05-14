@@ -11,8 +11,6 @@ allow:
  - dependency-type: "direct"
  update-type: "semver:minor"
 
-
-
 # Configurer le docker pour le fichier dependabot-actions.
 ---
 version: 2
