@@ -25,7 +25,7 @@ To create Docker images and build your project with docker you need :
 - add the access token that docker generated to you in your github project ( settings - secrets and variables - actions)
 - create workflows and push it to the github repository and see the result in actions. 
 
-Github Repository : ```text
+Github Repository : ```
 https://github.com/AMZALLiza/4DVP_super_calculator.git ```
 
 
