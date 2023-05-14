@@ -17,7 +17,7 @@ jobs:
         uses: actions/setup-go@v4
         with:
           go-version: 1.17
-      # executer le dependabot en précisant le token d'accès au GitHub.
+      # exécuter le dependabot en précisant le token d'accès au GitHub.
       - name: Dependabot
         uses: dependabot/dependabot-action@v2
         with:

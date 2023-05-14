@@ -1,14 +1,17 @@
-name: test workflow
+name: Test Workflow
 
+#déclancer le workflow à chaque push.
 on:
   push:
 
+#définir la version go pour l'exécution des tests.
 jobs:
   test:
     strategy:
       matrix:
         go-version: [1.17, 1.18, 1.19]
 
+#utiliser la version 3 et le SE ubuntu, installer la version go avec setup-go et configurer la commande go test ./... pour exécuter les tests.
     runs-on: ubuntu-latest
 
     steps:

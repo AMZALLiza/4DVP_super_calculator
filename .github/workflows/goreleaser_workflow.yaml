@@ -6,7 +6,7 @@ on:
   push:
     tags:
       - '*'
-#creation du job appelé build avec un ensemble de permissions pour son éxecution.
+#création du job appelé build avec un ensemble de permissions pour son éxecution.
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -32,7 +32,7 @@ jobs:
         with:
           go-version: stable
 
-#constuire et publier le projet en utilisant goreleaser et goreleaser-action
+#construire et publier le projet en utilisant goreleaser et goreleaser-action
       - name: Build and Release project 
         uses: goreleaser/goreleaser-action@v4
         if: success() && startsWith(github.ref, 'refs/tags/')
@@ -50,7 +50,7 @@ jobs:
       - name: Setup Docker Buildx
         uses: docker/setup-buildx-action@v2
 
-#s'authentifier à Docker Hub ( il faut créer un compte docker hub et générer un token qui par la suite va etre enregistrer dans votre)
+#s'authentifier à Docker Hub ( il faut créer un compte docker hub et générer un token)
       - name: Docker Hub Login
         uses: docker/login-action@v2
         with:
